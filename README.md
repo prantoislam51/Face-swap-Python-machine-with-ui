@@ -2,6 +2,8 @@
 
 Professional AI face swap application using InsightFace and DeepFaceLab hybrid engine. This project features a React frontend with a Flask backend.
 
+![Demo Photo](./demo.png)
+
 ## 🚀 Getting Started
 
 ### Prerequisites
