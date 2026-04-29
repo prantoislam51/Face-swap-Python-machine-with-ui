@@ -1,73 +1,95 @@
-# Welcome to your Lovable project
+# Face Swap Studio (Hybrid Pipeline)
 
-## Project info
+Professional AI face swap application using InsightFace and DeepFaceLab hybrid engine. This project features a React frontend with a Flask backend.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 🚀 Getting Started
 
-## How can I edit this code?
+### Prerequisites
+- **Node.js**: 18+ (Recommended 20 LTS)
+- **Python**: 3.10+
+- **Pip** & **venv**
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🛠️ Installation & Setup
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+### 1. Clone the repository
+```bash
+git clone https://github.com/pranto2051/Face-swap-Python-machine-with-ui.git
+cd Face-swap-Python-machine-with-ui
 ```
 
-**Edit a file directly in GitHub**
+### 2. Frontend Setup
+```bash
+# Install dependencies
+npm install
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+# Start development server
+npm run dev
+```
+The frontend will be available at `http://localhost:8080`.
 
-**Use GitHub Codespaces**
+### 3. Backend Setup
+It is recommended to use a virtual environment.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+**macOS/Linux:**
+```bash
+# Create virtual environment
+python3 -m venv .venv
 
-## What technologies are used for this project?
+# Activate virtual environment
+source .venv/bin/activate
 
-This project is built with:
+# Install dependencies
+pip install -r backend/requirements.txt
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+# Run the Flask server
+cd backend
+python app.py
+```
 
-## How can I deploy this project?
+**Windows:**
+```powershell
+# Create virtual environment
+python -m venv .venv
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+# Activate virtual environment
+.\.venv\Scripts\Activate.ps1
 
-## Can I connect a custom domain to my Lovable project?
+# Install dependencies
+pip install -r backend/requirements.txt
 
-Yes, you can!
+# Run the Flask server
+cd backend
+python app.py
+```
+The backend will be available at `http://127.0.0.1:5001`.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+---
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## 🏗️ Project Structure
+
+- `src/`: React frontend (Vite + TypeScript + Tailwind CSS)
+- `backend/`: Flask server with AI pipelines
+- `public/`: Static assets (favicon, images)
+- `static/`: Backend processed results
+
+---
+
+## 🧪 Verification
+Check if the backend is running properly:
+```bash
+curl http://127.0.0.1:5001/api/health
+```
+
+---
+
+## 📘 Documentation
+For more detailed OS-specific setup and common issues, please refer to:
+- [Run Frontend and Backend.md](./Run%20FontEnd%20and%20Backend.md)
+- [Mac Run.md](./Mac%20Run.md)
+- [HYBRID_QUICK_START.md](./backend/HYBRID_QUICK_START.md)
+
+## 🧰 Technologies Used
+- **Frontend**: Vite, React, TypeScript, Tailwind CSS, shadcn/ui
+- **Backend**: Flask, Socket.io, PyTorch, OpenCV, InsightFace, DeepFaceLab
